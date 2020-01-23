@@ -20,6 +20,36 @@ Four discrete actions are available, corresponding to:
 
 The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
 
+## Dependencies
+
+To set up your python environment to run the code in this repository, follow the instructions below.
+
+1. Create (and activate) a new environment with Python 3.6.
+
+	- __Linux__ or __Mac__: 
+	```bash
+	conda create --name drlnd python=3.6
+	source activate drlnd
+	```
+	- __Windows__: 
+	```bash
+	conda create --name drlnd python=3.6 
+	activate drlnd
+	```
+	
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
+	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	
+3. Clone the repository (if you haven't already!), and navigate to the `python/` folder.  Then, install several dependencies.
+```bash
+git clone https://github.com/udacity/deep-reinforcement-learning.git
+cd deep-reinforcement-learning/python
+pip install .
+```
+
+in [this repository](https://github.com/udacity/deep-reinforcement-learning/blob/master/README.md) are more step´s on how to configure all the enviroments but unti here is possible to train the Agent
+
 ### Getting Started
 
 1. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
@@ -36,3 +66,5 @@ The task is episodic, and in order to solve the environment, your agent must get
 Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
 
 this README is base on [Udacity Repository](https://github.com/udacity/deep-reinforcement-learning/blob/master/p1_navigation/README.md)
+
+
