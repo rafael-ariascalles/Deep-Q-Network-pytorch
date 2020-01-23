@@ -4,6 +4,7 @@ from collections import deque
 import numpy as np
 import matplotlib.pyplot as plt
 
+SCORE_WHEN_SOLVED = 16
 
 def dqn(agent,n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay=0.995):
     """Deep Q-Learning.
@@ -51,21 +52,19 @@ def dqn(agent,n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay
         if i_episode % 5 == 0:
             print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
         
-        if np.mean(scores_window)>=14.0:
+        if np.mean(scores_window)>=SCORE_WHEN_SOLVED:
             print('\nEnvironment solved in {:d} episodes!\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
             agent.save()
             break
     
     return scores
 
-
-
-
 if __name__ == "__main__":
 
     env = UnityEnvironment(file_name="./Banana_Windows_x86_64\Banana_Windows_x86_64/Banana.app")
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]
+    
     env_info = env.reset(train_mode=True)[brain_name]
 
     action_size = brain.vector_action_space_size

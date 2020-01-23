@@ -15,7 +15,7 @@ TAU = 0.01                  # for soft update of target parameters - inc TAU
 LR = 0.0005                 # learning rate - mantain LR
 UPDATE_EVERY = 10           # how often to update the network - inc UR
 
-device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 device = "cpu"
 
 class Agent():
