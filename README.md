@@ -64,7 +64,12 @@ in [this repository](https://github.com/udacity/deep-reinforcement-learning/blob
 
 ### Instructions
 
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+Follow the steps in `Navigation.ipynb`  or run the `trainer.py` for the agent training.
+
+run the command 
+```bash
+python trainer.py
+```
 
 this README is base on [Udacity Repository](https://github.com/udacity/deep-reinforcement-learning/blob/master/p1_navigation/README.md)
 
