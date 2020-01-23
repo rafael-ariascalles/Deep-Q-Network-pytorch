@@ -64,7 +64,7 @@ if __name__ == "__main__":
     env = UnityEnvironment(file_name="./Banana_Windows_x86_64\Banana_Windows_x86_64/Banana.app")
     brain_name = env.brain_names[0]
     brain = env.brains[brain_name]
-    
+
     env_info = env.reset(train_mode=True)[brain_name]
 
     action_size = brain.vector_action_space_size
@@ -81,5 +81,5 @@ if __name__ == "__main__":
     plt.plot(np.arange(len(scores)), scores)
     plt.ylabel('Score')
     plt.xlabel('Episode #')
-    plt.show()
     plt.savefig('score_per_episode.png')
+    plt.show()
