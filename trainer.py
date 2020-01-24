@@ -4,7 +4,7 @@ from collections import deque
 import numpy as np
 import matplotlib.pyplot as plt
 
-SCORE_WHEN_SOLVED = 16
+SCORE_WHEN_SOLVED = 17
 
 def dqn(agent,n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay=0.995):
     """Deep Q-Learning.
@@ -28,7 +28,8 @@ def dqn(agent,n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay
         state = env_info.vector_observations[0] 
         score = 0
 
-        for t in range(max_t):
+        #for t in range(max_t):
+        while True: 
             action = agent.act(state, eps)
             env_info = env.step(action.astype(int))[brain_name]        # send the action to the environment
             
@@ -49,7 +50,7 @@ def dqn(agent,n_episodes=2000, max_t=500, eps_start=1.0, eps_end=0.01, eps_decay
         
         print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)), end="")
         
-        if i_episode % 5 == 0:
+        if i_episode % 100 == 0:
             print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_window)))
         
         if np.mean(scores_window)>=SCORE_WHEN_SOLVED:
