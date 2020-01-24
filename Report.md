@@ -8,7 +8,7 @@ Recalling the algorithm from the paper [Human-level control through deep reinfor
 
 ![Q-Network_algorithm](./algo.PNG)
 
-it has been implemented in the Agent class of the [dqn_agentes.py](dqn_agentes.py) script.
+it has been implemented in the Agent class of the [dqn_agentes.py](./dqn_agentes.py) script.
 
 in the construction of the class it's been replicated the first 3 lines of the algorithm. initialization of the Newtworks (local for training and target for evaluation) 
 
