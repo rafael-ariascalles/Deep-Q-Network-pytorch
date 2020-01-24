@@ -113,7 +113,7 @@ for this solution we use a Neural network consist on
 
 3 blocks of Batchnormalized linear layers with ReLu activations, in which the first use a Dropout layer in the training Step. [models.py](./models.py)
 
-````python
+```python
     def __init__(self, state_size, action_size, seed):
 
         super(QNetwork, self).__init__()
